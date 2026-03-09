@@ -1,0 +1,105 @@
+coffee_type: coffee  #inline comment
+temperature: hot
+servings: 2
+brewing_time: 5
+
+first_recepie:
+  base: coffee_bean
+  milk: whole_milk
+
+first_recepie_2:
+  base: large_coffee_bean
+  milk: whole_milk
+
+
+coffee_name: classic coffee #data-type starting
+description: "CLASSIC COFFEE IS THE MOST BASIC TYPE OF A COFFEE"
+tagline: 'Most loved Coffee'
+
+brewing_instruction: |
+  boil water
+  add coffee beans
+  add milk
+
+brewing_instruction_two: >
+  boil water
+  add coffee beans
+  add milk
+
+cups_per_day: 3
+cups_per_day_two: 0xFF22FF
+
+is_hot: true
+add_sugar: yes
+
+sweetner: null
+alternative_milk: ~
+
+morning_brew: 2025-02-21
+local_time: 2025-02-21 08:30:01
+
+items:  #list
+  -sugar
+  -beans
+  -milk
+  -water
+  -frother
+  -whisker
+  -true
+  -200
+
+
+coffee_ctegories:
+  - name: Traditional
+    varieties:
+      -dalgona_coffee
+      -black_coffee
+      -cappucuino
+  - name: modern
+    varieties:
+      - chocolate_coffee
+      - vanilla_coffee
+
+dalgona_coffee:
+  ingredients:
+    coffee: nescafe
+    liquid:
+      water: 20ml
+      milk: 200ml
+    sweetner:
+      sugar: 20gm
+  preparation:
+    method: simmer
+    duration: 5_minutes
+
+coffee_menu:
+  - name: Classic_Coffee
+    price: 20
+    size: regular
+  - name: cappucuino
+    price: 50
+    size: regular
+
+
+default_coffee_base: &default_base
+  coffee: Classic_Coffee
+  milk: 200ml
+  brewing_time: 5
+
+morning_coffee:
+  <<: *default_base
+  milk: 200ml
+
+evening_coffee:
+  <<: *default_base
+  milk: 100ml
+
+
+zip_code: !!str 12345
+count: !!int "123"
+
+
+unique_items: !!set
+  ? coffee_beans
+  ? sugar
+
